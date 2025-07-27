@@ -1,0 +1,16 @@
+networks:
+  default:
+    name: xoxxox_netmid
+    external: true
+services:
+  xoxxox_imgdll:
+    image: xoxxox_envoai:001
+    container_name: xoxxox_imgdll
+    volumes:
+    - ../../../export:/opt/common
+    env_file:
+    - ./envdir.txt
+    - ${HOME}/sec/key/.envath_oai.sh
+    ports:
+    - 13501:80
+    command: "python /opt/common/bin/xoxxox/srvimg.py --engine xoxxox/engine_imgdll --gensyn 0"
