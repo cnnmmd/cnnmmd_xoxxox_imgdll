@@ -10,7 +10,7 @@ services:
     - ../../../export:/opt/common
     env_file:
     - ./envdir.txt
-    - ${HOME}/sec/key/.envath_oai.sh
+    - ${HOME}/sec/key/.envath_oai.txt
     ports:
     - 13501:80
     command: "python /opt/common/bin/xoxxox/srvimg.py --engine xoxxox/engine_imgdll --gensyn 0"
